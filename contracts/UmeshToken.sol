@@ -24,6 +24,7 @@ contract UmeshToken {
         emit TokenTransfer(msg.sender, _receiver, _amount);
     }
 
+
     function destroyToken(uint256 _amount) external {
         require(addressTokenBalance[msg.sender] >= _amount, "Insufficient balance");
 
