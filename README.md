@@ -1,4 +1,3 @@
-
 # Custom ERC-20 Token Contract - MODULE 3
 
 UmeshToken is a custom ERC-20 token contract built using Solidity. It allows users to create and manage their own tokens on the Ethereum blockchain. This is ETH+AVAX Module 3 assignment of Metacrafters Course.
@@ -9,9 +8,9 @@ UmeshToken is a custom ERC-20 token contract built using Solidity. It allows use
 - [Getting Started](#getting-started)
   - [Deployment](#deployment)
 - [Functions](#functions)
-  - [sendToken](#sendtoken)
-  - [destroyToken](#destroytoken)
-  - [generateToken](#generatetoken)
+  - [transfer](#sendtoken)
+  - [burn](#destroytoken)
+  - [mint](#mint)
 - [Resources](#resources)
 
 ## Overview
@@ -35,26 +34,32 @@ To deploy the UmeshToken contract on the Ethereum blockchain, follow these steps
 
 ## Functions
 
-### sendToken
+### tranfer
 
 Transfers tokens from the sender's address to the receiver's address.
 
-solidity
+```solidity
 function sendToken(address _receiver, uint256 _amount) external
+```
 
+### burn
 
-### destroyToken
 Destroys tokens from the sender's address and decreases the total supply.
 
-solidity
+```solidity
 function destroyToken(uint256 _amount) external
+```
 
+### mint
 
-### generateToken
-Generates new tokens and increases the total supply.
+Mints new tokens and increases the total supply. Only the contract owner can call this function.
 
-solidity
-function generateToken(address _receiver, uint256 _amount) external
+```solidity
+function mint(address _receiver, uint256 _amount) external
+```
+
+## Sepolia Testnet
+Sepolia Testnet Explorer - **[Click Here](https://sepolia.etherscan.io/address/0xd309b466fc3b203de129a9c72a10b8bee40b91bc)**
 
 
 ## Resources
@@ -65,4 +70,5 @@ function generateToken(address _receiver, uint256 _amount) external
 - [ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 
 ## Owner Name
+
 **Umesh Ola - 21BCS10670**
